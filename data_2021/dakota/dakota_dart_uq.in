@@ -1,0 +1,44 @@
+environment
+  tabular_data
+    tabular_data_file = 'dart_results_tabular.dat'
+
+method
+  sampling 
+    sample_type lhs
+    samples = 400
+    seed = 331
+ 
+variables
+  normal_uncertain = 2
+    descriptors    = 'FaceCovMax'  'rResolBulk'
+    means          =  0.707         3e-9  
+    std_deviations =  0.0666        0.666e-9
+    #upper_bounds   =  0.907         5e-9
+    #lower_bounds   =  0.507         1e-9
+
+  lognormal_uncertain  = 6
+    descriptors    =  'vResol'  'DatomFissGBx'   'fNucleate'  'aAtomDifFiss'  'StickProb' 'rResolGBB'
+    lambdas        =   -40.75    10.31            -21.23       -69.76          -15.42      -14.51
+    zetas          =   0.77      0.77             0.77         0.77            0.77        0.77 
+    #upper_bounds   =   2e-17     3e5              6e-9         5.07e-30        2e-6        5e-6
+    #lower_bounds   =   2e-19     3e3              6e-11        5.07e-32        2e-8        5e-8
+
+
+interface
+  analysis_drivers = 'dart_simulator.sh'
+    fork
+      parameters_file = 'params.in'
+      results_file    = 'results.out'
+      file_tag
+      file_save
+      work_directory named = 'workdir/run'
+        copy_files 'dart_input/*'
+        directory_tag
+        directory_save
+  asynchronous evaluation_concurrency = 200
+
+responses
+  descriptor 'fuel_swelling' 'fuel_gas_swelling'
+  response_functions = 2
+  no_gradients
+  no_hessians
