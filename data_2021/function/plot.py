@@ -19,5 +19,5 @@ tra = jar[2651:2786]
 
 fig = plt.figure()
 ax = fig.add_subplot(projection='3d')
-ax.scatter(jar['fuel_temp'], jar['fission_rate'], jar['fuel_gas_swelling'])
+ax.scatter(jar['grain_size'], jar['fission_density'], jar['fuel_gas_swelling'])
 plt.show()
