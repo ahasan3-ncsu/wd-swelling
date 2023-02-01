@@ -12,7 +12,8 @@ for line in jar:
         qoi[i].append(float(tmp[i+1]))
 
 for i in range(6):
-    plt.plot(gr, qoi[i], label=f'{i}')
+    plt.plot(gr, qoi[i])
+    plt.scatter(gr, qoi[i], label=f'{i}')
 
 plt.legend()
 plt.show()
