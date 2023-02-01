@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-with open('eu.out', 'r') as f:
+with open('eureka.out', 'r') as f:
     jar = f.readlines()
 
 gr = []
