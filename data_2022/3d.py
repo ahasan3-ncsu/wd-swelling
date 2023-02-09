@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def test(fd, D):
+def pared(fd, D):
     a1 = 2.53
     b1 = 0.606
     c1 = 4.27
@@ -10,22 +10,18 @@ def test(fd, D):
     def A(D):
         return a1 * np.exp(-b1*(D-c1)) + d1
 
-    a2 = 0.37
-    b2 = 3.31
-    c2 = 12.7
-    k2 = 100
     def B(D):
-        return c2 * (D/k2)**a2 * (1-D/k2)**b2
+        return 3.08
 
     def C(D):
-        return 0.9
+        return 0.932
 
-    a4 = 0.647
-    b4 = 13.7
-    c4 = 700
-    k4 = 213.3
+    a4 = 38.431
+    b4 = 0.09157
+    c4 = 0.75734
+    h4 = 17.9118
     def L(D):
-        return c4 * (D/k4)**a4 * (1-D/k4)**b4
+        return a4 * np.exp(-b4*D) * np.log(c4*D) + h4
 
     a5 = 1.78
     b5 = 0.59
@@ -43,12 +39,13 @@ def test(fd, D):
     return A(D) / (1 + np.exp(-B(D) * (fd - C(D)))) \
         + L(D) / (1 + np.exp(-M(D) * (fd - N(D))))
 
-vtest = np.vectorize(test)
+
+vpared = np.vectorize(pared)
 
 X = np.linspace(0, 7, 50)
 Y = np.linspace(1, 34, 100)
 X, Y = np.meshgrid(X, Y)
-Z = vtest(X, Y)
+Z = vpared(X, Y)
 
 
 jar = pd.read_csv('nominal_set.csv')
