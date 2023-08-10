@@ -53,11 +53,20 @@ fd = 'Fission Density (10^21 f/cm3)'
 gr = 'Grain Size (um)'
 fgs = 'Fuel Gas Swelling (%)'
 
-fig = plt.figure()
+fig = plt.figure(figsize=(10,8))
 ax = fig.add_subplot(projection='3d')
 
 ax.plot_surface(X, Y, Z, cmap=plt.cm.jet, alpha=0.5,
                 linewidth=0, antialiased=False)
 
 ax.scatter(jar[fd], jar[gr], jar[fgs], c='black')
-plt.show()
+
+#ax.view_init(elev=10, azim=130)
+ax.view_init(elev=10, azim=-40)
+ax.set_xlabel(r'Fission density ($\times 10^{21}$ fission/cm$^3$)')
+ax.set_ylabel('Grain size ($\mu m$)')
+ax.set_zlabel('Fission gas swelling (%)')
+plt.tight_layout()
+#plt.savefig('img_6a.pdf')
+plt.savefig('img_6b.pdf')
+#plt.show()
