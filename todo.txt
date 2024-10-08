@@ -1,0 +1,7 @@
+TODO
+x clean the data structure
+  x put all the F_d info in one column
+- try to implement the scheme in Wu's paper roughly
+  - doesn't need to have rigorous basis
+- use GP to model the bias; choose a few F_d values for that
+- expectations might have been manually modified; fix them
