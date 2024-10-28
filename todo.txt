@@ -5,12 +5,11 @@ either work or don't do anything at all
 make your subtasks as small as possible
 
 TODO
-- plot fs1 against fs2 to see if they are independent
 - make multivariate target output
   - try fs independence anyway
-- expectations have been manually modified; fix them
-  - prediction bounds are closer to the observation noise
   - see what happens if you run MCMC
+- use data at 1e21 (or 3e21) and 7e21 to perform IUQ
+  - swelling at these F_ds are independent
 - try to implement the scheme in Wu's paper roughly
   - doesn't need to have rigorous basis
 - read more papers on IUQ
@@ -41,3 +40,6 @@ DONE
 - visualize the clean data
 - fit a GP to the bias data
   - plot the uncertainty in the GP model too
+- plot fs1 against fs2 to see if they are independent
+- expectations have been manually modified; fix them
+  - prediction bounds are closer to the observation noise
