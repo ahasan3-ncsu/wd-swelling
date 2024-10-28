@@ -1,7 +1,43 @@
+GET YOUR MASTER'S
+
+positive affirmations about your job
+either work or don't do anything at all
+make your subtasks as small as possible
+
 TODO
-x clean the data structure
-  x put all the F_d info in one column
+- plot fs1 against fs2 to see if they are independent
+- make multivariate target output
+  - try fs independence anyway
+- expectations have been manually modified; fix them
+  - prediction bounds are closer to the observation noise
+  - see what happens if you run MCMC
 - try to implement the scheme in Wu's paper roughly
   - doesn't need to have rigorous basis
-- use GP to model the bias; choose a few F_d values for that
-- expectations might have been manually modified; fix them
+- read more papers on IUQ
+
+PROMISED
+- use orig. robinson correlation pred bounds
+- combine multi output into a single output
+- how to combine different types of output
+  - look at DAKOTA manual
+- writeup
+
+BIG PICTURE
+- do we need the uncertainty in the GP model?
+  - is it ok to use lasso?
+- bias estimation across all F_d
+  - dart underestimates swelling (+ve bias)
+- prediction bounds are very wide
+  - everything falls within the bounds
+  - ANL is using sum of squared errors but no indication
+	about how they did the Bayesian analysis
+- compare the initial parameter distributions used to make
+  the dataset to the final MCMC distributions
+- using bias in IUQ might make things worse
+
+DONE
+- clean the data structure
+  - put all the F_d info in one column
+- visualize the clean data
+- fit a GP to the bias data
+  - plot the uncertainty in the GP model too
