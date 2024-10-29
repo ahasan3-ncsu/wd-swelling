@@ -5,27 +5,31 @@ either work or don't do anything at all
 make your subtasks as small as possible
 
 TODO
-- compare the initial parameter distributions used to make
-  the dataset to the final MCMC distributions
-- try to implement the scheme in Wu's paper roughly
-  - doesn't need to have rigorous basis
-- read more papers on IUQ
+- compare the initial parameter distributions to the posteriors
+- vary the low/med F_d data in the target
+- use a multivariate gaussian for proposal distribution
+- start the writeup template
 
 PROMISED
-- how to combine different types of output
-  - look at DAKOTA manual
-- writeup
+- global SA
+  - Sobol' indices
+- feature importance
+- multiple MCMC chains
+- convergence diagnostics
+- optimized surrogates
+- swelling vs F_d using the param posteriors
+  - use surrogates for that
 
 BIG PICTURE
-- do we need the uncertainty in the GP model?
-  - is it ok to use lasso?
-- bias estimation across all F_d
-  - dart underestimates swelling (+ve bias)
 - prediction bounds are very wide
   - everything falls within the bounds
   - ANL is using sum of squared errors but no indication
 	about how they did the Bayesian analysis
-- using bias in IUQ might make things worse
+- Pareto frontier
+- try to implement the scheme in Wu's paper roughly
+  - doesn't need to have rigorous basis
+- read more papers on IUQ
+- read the DAKOTA theory section
 
 DONE
 - clean the data structure
@@ -41,3 +45,4 @@ DONE
   - see what happens if you run MCMC
 - use data at 1e21 (or 3e21) and 7e21 to perform IUQ
   - swelling at these F_ds are independent
+- combine different types of output with mvn gaussian
