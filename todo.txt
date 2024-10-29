@@ -5,18 +5,13 @@ either work or don't do anything at all
 make your subtasks as small as possible
 
 TODO
-- make multivariate target output
-  - try fs independence anyway
-  - see what happens if you run MCMC
-- use data at 1e21 (or 3e21) and 7e21 to perform IUQ
-  - swelling at these F_ds are independent
+- compare the initial parameter distributions used to make
+  the dataset to the final MCMC distributions
 - try to implement the scheme in Wu's paper roughly
   - doesn't need to have rigorous basis
 - read more papers on IUQ
 
 PROMISED
-- use orig. robinson correlation pred bounds
-- combine multi output into a single output
 - how to combine different types of output
   - look at DAKOTA manual
 - writeup
@@ -30,8 +25,6 @@ BIG PICTURE
   - everything falls within the bounds
   - ANL is using sum of squared errors but no indication
 	about how they did the Bayesian analysis
-- compare the initial parameter distributions used to make
-  the dataset to the final MCMC distributions
 - using bias in IUQ might make things worse
 
 DONE
@@ -43,3 +36,8 @@ DONE
 - plot fs1 against fs2 to see if they are independent
 - expectations have been manually modified; fix them
   - prediction bounds are closer to the observation noise
+- make multivariate target output
+  - try fs independence anyway
+  - see what happens if you run MCMC
+- use data at 1e21 (or 3e21) and 7e21 to perform IUQ
+  - swelling at these F_ds are independent
