@@ -4,6 +4,7 @@ seaborn
 pandas
 scipy
 scikit-learn
+SALib
 jupyterlab
 jupyterlab-vim
 jupyterlab_theme_solarized_dark

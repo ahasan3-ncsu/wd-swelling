@@ -30,6 +30,7 @@ BIG PICTURE
   - doesn't need to have rigorous basis
 - read more papers on IUQ
 - read the DAKOTA theory section
+- variance based SA makes use of surrogates
 
 DONE
 - clean the data structure
