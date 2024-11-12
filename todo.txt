@@ -5,16 +5,23 @@ either work or don't do anything at all
 make your subtasks as small as possible
 
 TODO
+- start writing
+  - define the outline
+  - fill with contents
+- read Ziyu's papers thoroughly
+  - follow the procedure in your work
+- use functional PCA for dim reduction
 - optimize surrogates
-- global SA
-  - Sobol' indices
-- feature importance
+  - maybe use bayesian NNs
+  - validate your surrogates
 - multiple MCMC chains
+  - easy to implement
+  - just call the func. multiple times
 - convergence diagnostics
 - swelling vs F_d using the param posteriors
   - use all the surrogates for that
   - compare against the target and the dataset
-- start writing
+- come up with cool figures
 
 BIG PICTURE
 - prediction bounds are very wide
@@ -48,3 +55,5 @@ DONE
 - combine different types of output with mvn gaussian
 - vary the low/med F_d data in the target
 - use a multivariate gaussian for proposal distribution
+- global SA using SALib
+  - Sobol' indices
