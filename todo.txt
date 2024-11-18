@@ -1,8 +1,28 @@
 GET YOUR MASTER'S
 
-positive affirmations about your job
 either work or don't do anything at all
-make your subtasks as small as possible
+positive affirmations about your job
+one itty-bitty subtask at a time
+
+FLOW
+- problem definition
+- target distribution
+- exploration of data
+  - model vs exp. data as a function of F_d
+  - correlation heatmap
+  - Sobol' indices
+- choosing two F_d for analysis
+- dimensionality reduction
+  - try something other than PCA
+- surrogate modeling
+  - at least 2
+- MCMC iteration
+  - redo the iterations maybe?
+- FUQ with surrogates
+  - criss cross validation
+  - did we achieve the target? graphs!
+- param prior vs posterior
+  - posterior cannot be outside the prior
 
 TODO
 - start writing
@@ -37,6 +57,7 @@ BIG PICTURE
 - posteriors from different analysis seem different
   - find the cause
 - compare the initial parameter distributions to the posteriors
+- PCA doesn't work because the param values are orthogonal by design
 
 DONE
 - clean the data structure
