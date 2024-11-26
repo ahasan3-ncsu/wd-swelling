@@ -16,12 +16,14 @@ ISSUES
 - how to deal with multiple irradiation conditions?
 
 FIGURES/TABLES
+DEF
 - Parameters and their ranges
 - Data exploration
   - Correlation heatmap
   - Scatterplot against fuel swelling
   - Sobol' indices?
 - Target distribution
+RES
 - Surrogates
   - Why LASSO should be used?
   - Prediction vs actual graphs
