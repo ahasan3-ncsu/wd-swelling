@@ -11,9 +11,8 @@ ISSUES
   - how to implement that in the sampler?
 	- handle 0/0 when computing the acceptance ratio
 	- reject these cases
-	- might get stuck in the corner
-	- we might get uniform distributions
-- how to deal with multiple irradiation conditions?
+- fix the sampler
+- implement all the diagnostics
 
 FIGURES/TABLES
 DEF
@@ -74,3 +73,4 @@ BIG PICTURE
   - find the cause
 - compare the initial parameter distributions to the posteriors
 - PCA doesn't work because the param values are orthogonal by design
+- how to deal with multiple irradiation conditions?
