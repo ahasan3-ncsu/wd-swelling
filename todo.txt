@@ -4,16 +4,6 @@ either work or don't do anything at all
 FOR FUCK'S SAKE, BLOCK ALL DISTRACTIONS!
 one itty-bitty subtask at a time
 
-ISSUES
-- remove some params from MCMC sampling
-- should we have teleport in the MCMC? No.
-  - zero prior rejects the sample automatically
-  - how to implement that in the sampler?
-	- handle 0/0 when computing the acceptance ratio
-	- reject these cases
-- fix the sampler
-- implement all the diagnostics
-
 FIGURES/TABLES
 DEF
 - Parameters and their ranges

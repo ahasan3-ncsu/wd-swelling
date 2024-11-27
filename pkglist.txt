@@ -4,6 +4,7 @@ seaborn
 pandas
 scipy
 scikit-learn
+arviz
 SALib
 jupyterlab
 jupyterlab-vim
