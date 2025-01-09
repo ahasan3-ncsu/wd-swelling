@@ -4,28 +4,6 @@ either work or don't do anything at all
 FOR FUCK'S SAKE, BLOCK ALL DISTRACTIONS!
 one itty-bitty subtask at a time
 
-FIGURES/TABLES
-DEF
-- Parameters and their ranges
-- Data exploration
-  - Correlation heatmap
-  - Scatterplot against fuel swelling
-  - Sobol' indices?
-- Target distribution
-RES
-- Surrogates
-  - Why LASSO should be used?
-  - Prediction vs actual graphs
-  - Table with R2/RMSE/MAE
-- MCMC samples (show 2 chains)
-  - Histograms too (with 2 chains)
-	- Convergance diagnostic
-  - Show fitted distributions with the histograms
-    - Goodness of fit
-- Forward propagation from both the samples and
-  the fitted distribtions
-  - Measure the similarity of two distributions
-
 FLOW
 - problem definition
 - target distribution
@@ -42,9 +20,12 @@ FLOW
   - redo the iterations maybe?
   - convergence diagnostics
 - FUQ with surrogates
+  - copulas
   - cross validation with multiple surrogates?
 	- doesn't seem to work!
   - did we achieve the target? graphs!
+  - measure the similarity of two distributions
+	- goodness of fit
 - param prior vs posterior
   - posterior cannot be outside the prior
 
