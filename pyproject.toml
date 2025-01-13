@@ -1,0 +1,21 @@
+[project]
+name = "wd-swelling"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "arviz>=0.20.0",
+    "copulas>=0.12.0",
+    "jupyterlab>=4.3.4",
+    "jupyterlab-theme-solarized-dark>=3.0.1",
+    "jupyterlab-vim>=4.1.4",
+    "matplotlib>=3.10.0",
+    "numpy>=2.2.1",
+    "pandas>=2.2.3",
+    "plotly>=5.24.1",
+    "salib>=1.5.1",
+    "scikit-learn>=1.6.1",
+    "scipy>=1.15.1",
+    "seaborn>=0.13.2",
+]
