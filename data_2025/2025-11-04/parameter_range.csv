@@ -1,0 +1,10 @@
+parameter,lower_bound,upper_bound
+dGrainHBS,1e-5,1e-4
+FaceCovMax,0.5,0.907
+SwellLink,0.01,0.08
+rResolBulk,6e-10,5e-9
+DatomFissGBx,6e3,5e4
+StickProb,2e-10,4e-7
+fNucleate,3e-10,3e-9
+vResol,1e-18,4e-18
+rResolGBB,2.5e-7,1e-6
