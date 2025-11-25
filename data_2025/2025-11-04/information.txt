@@ -1,0 +1,10 @@
+RERTR5 - V6018G
+Life-averaged fuel temperature: 116.3 C
+Life-averaged fission rate: 2.30e14 f/cm3/s
+End-of-life fission density: 2.31e21 f/cm3
+
+RERTR12 - L1P755
+Life-averaged fuel temperature: 133.6 C
+Life-averaged fission rate: 6.86e14 f/cm3/s
+End-of-life fission density: 5.34e21 f/cm3
+Experimental Fuel swelling: 32 % (Francine Rice et al., RERTR–12 Post-irradiation Examination Summary Report,INL/EXT-14-33066)
