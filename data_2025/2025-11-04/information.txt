@@ -8,3 +8,19 @@ Life-averaged fuel temperature: 133.6 C
 Life-averaged fission rate: 6.86e14 f/cm3/s
 End-of-life fission density: 5.34e21 f/cm3
 Experimental Fuel swelling: 32 % (Francine Rice et al., RERTR–12 Post-irradiation Examination Summary Report,INL/EXT-14-33066)
+
+--------------------------
+More context from Atomsky:
+--------------------------
+
+Kim-Hofman-Cheon (2013) reports that for RERTR5-V6018G:
+BOL temperature: 90 C
+Life-averaged fission rate: 2.5e14 f/cm3/s
+Fission density in fuel: 2.4e21 f/cm3
+
+Given solid swelling is equal to 4 x F_d,
+V6018Gs total fuel swelling is (1.1 + 4 x 2.4) = 10.7 %.
+
+Robinson et al. (2021) states that
+the 95 % prediction bounds are +/- 5.28 %.
+So, the sigma for the likelihood is (5.28 / 2) = 2.64 %.
