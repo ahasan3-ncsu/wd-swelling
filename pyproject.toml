@@ -10,6 +10,7 @@ dependencies = [
     "jupyterlab>=4.3.4",
     "jupyterlab-theme-solarized-dark>=3.0.1",
     "jupyterlab-vim>=4.1.4",
+    "marimo>=0.23.11",
     "matplotlib>=3.10.0",
     "numpy>=2.2.1",
     "pandas>=2.2.3",
