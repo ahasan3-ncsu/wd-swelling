@@ -13,17 +13,28 @@ you can run it as a simple python file to catch all errors.
 Never edit an existing file unless you are instructed otherwise.
 Always create a new file.
 
-## Directory of interest
+## Directory of interest (DoI)
 
-Our main task is in ./inv_uq/2026-03-12/ directory.
-Open and edit files only in the directory of interest.
+Our main task is in `./inv_uq/2026-03-12/` directory.
+Open and edit files only in the directory of interest (DoI).
 
 ## Datasets
 
-The directory has two datasets:
-RERTR5_9_parameters.csv and RERTR12_9_parameters.csv.
+The DoI has two datasets:
+`RERTR5_9_parameters.csv` and `RERTR12_9_parameters.csv`.
 RERTR5 has low fission density data,
 and RERTR12 has high fission density data.
+
+### CAUTION
+
+Some inputs have values and ranges near `1e-18`.
+Never apply sklearn scalers directly to the raw inputs:
+`MinMaxScaler` can treat such ranges as constant.
+First make every input dimensionless by dividing it
+by a recorded, nonzero parameter-specific reference scale,
+then apply any additional scaling.
+Verify that every nonconstant input remains nonconstant
+and has an order-one transformed range.
 
 ## Parameter definitions
 
@@ -40,15 +51,15 @@ and RERTR12 has high fission density data.
   for the probability of bubble nucleation on the grain boundary.
 - vResol is the probability that a gas bubble interacts with fission fragments.
 - rResolGBB is the average re-solution distance
-  an atom is ejected from the grain boundary gas bubbles
+  an atom is ejected from the grain boundary gas bubbles.
 
 ### Output
 
-- Fuel_Swelling
+- Fuel_Swelling: self explanatory.
 - Porosity: highly correlated with Fuel_Swelling; should be ignored.
 - Bubble_Size: average bubble size.
-- C1--C6: probability that bubble size is
-  within one of the six predefined bubble size bins
+- C1--C6: six-bin discretization of
+  the bubble-size concentration distribution.
 
 ## Experimental observations
 
@@ -73,13 +84,17 @@ For RERTR12, the experimentally observed values and measurement error/noise are:
 
 ## Research goal
 
-The research target is to find posterior distributions of input parameters
-such that the corresponding outputs are close to the experimental observation.
-
+We will construct surrogate models using the two datasets.
 We will mainly use Bayesian Neural Networks and Gaussian Processes
-to build surrogate models.
+to build these surrogate models.
 
-RERTR5 and RERTR12 have different sets of output available.
+The goal is to perform calibration of input parameters
+using Bayesian inference.
+So, we need to find posterior distributions of input parameters
+such that the forward propagation from those parameters
+lead to output values close to the experimental observation.
+
+RERTR5 and RERTR12 have different sets of output parameters available.
 Some outputs might be highly correlated, and thus redundant.
 The goal is to find posteriors of input parameters
-using multiple somewhat uncorrelated outputs.
+using multiple (somewhat uncorrelated) outputs.
